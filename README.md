@@ -1,10 +1,16 @@
-# Front-End AI Capstone — [Project Name]
+# Front-End AI Capstone — FlyRank
 
 A frontend AI engineering capstone project built with React, TypeScript, and Next.js.
 
 ## Overview
 
-[One or two sentences: what the app does and what problem it solves.]
+FlyRank is an AI-powered web app that uses a large language model to help users interact with content through a polished, modern interface. It demonstrates a full-stack frontend approach for building secure, server-side AI features.
+
+## Features
+
+- AI-assisted content interaction through a Next.js application
+- Server-side LLM requests to keep API keys protected
+- Auth-ready structure with route protection and environment-based configuration
 
 ## Tech Stack
 
