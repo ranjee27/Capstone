@@ -1,0 +1,8 @@
+{
+  "name": "settings-form-vague",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "test": "node --test"
+  }
+}

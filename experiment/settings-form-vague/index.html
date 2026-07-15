@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings Form</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="panel" aria-labelledby="settings-title">
+        <header class="panel-header">
+          <p class="eyebrow">Preferences</p>
+          <h1 id="settings-title">Account settings</h1>
+          <p class="intro">Update your profile details and choose how you want to hear from us.</p>
+        </header>
+
+        <form id="settings-form" novalidate>
+          <div class="field-group">
+            <label for="full-name">Display name</label>
+            <input id="full-name" name="name" type="text" autocomplete="name" required />
+          </div>
+
+          <div class="field-group">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+            <p class="hint">We’ll only use this address for account updates.</p>
+          </div>
+
+          <fieldset class="field-group">
+            <legend>Notifications</legend>
+            <label class="checkbox-row">
+              <input type="checkbox" name="emailUpdates" value="true" />
+              <span>Email updates</span>
+            </label>
+            <label class="checkbox-row">
+              <input type="checkbox" name="productTips" value="true" />
+              <span>Product tips</span>
+            </label>
+          </fieldset>
+
+          <div class="field-group">
+            <label for="theme">Appearance</label>
+            <select id="theme" name="theme">
+              <option value="system">System default</option>
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="language">Language</label>
+            <select id="language" name="language">
+              <option value="english">English</option>
+              <option value="french">Français</option>
+              <option value="spanish">Español</option>
+            </select>
+          </div>
+
+          <button type="submit">Save settings</button>
+        </form>
+
+        <section id="status" class="status" aria-live="polite" role="status"></section>
+
+        <section class="preview" aria-labelledby="preview-title">
+          <h2 id="preview-title">Preview</h2>
+          <dl>
+            <div>
+              <dt>Name</dt>
+              <dd id="preview-name">—</dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd id="preview-email">—</dd>
+            </div>
+            <div>
+              <dt>Theme</dt>
+              <dd id="preview-theme">—</dd>
+            </div>
+            <div>
+              <dt>Language</dt>
+              <dd id="preview-language">—</dd>
+            </div>
+            <div>
+              <dt>Notifications</dt>
+              <dd id="preview-notifications">None</dd>
+            </div>
+          </dl>
+        </section>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
