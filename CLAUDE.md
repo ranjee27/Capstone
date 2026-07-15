@@ -1,3 +1,5 @@
+# CLAUDE.md
+
 Guidance for Claude Code (and any AI assistant) working in this repository.
 
 ## Project
@@ -50,8 +52,19 @@ LLM API to [briefly describe core feature — e.g. "summarize documents",
 - No commented-out code or console.logs in committed code
 
 ### Testing
-- [e.g. Vitest / Jest + React Testing Library for components]
+- Vitest + React Testing Library for components, jsdom environment
+- `vitest.config.ts` must include the `@vitejs/plugin-react` plugin —
+  without it, any component using JSX fails every test with
+  `ReferenceError: React is not defined`. Confirmed missing and fixed
+  during the settings-form exercise; check this file exists and is
+  configured correctly before assuming a new test setup works
 - New features should include at least a basic test where practical
+- After writing tests, actually run them (`npm test`) and read the
+  output — do not report tests as passing without independently
+  confirming the run succeeded. See RULES.md lessons-learned section
+- After scaffolding or `npm install`, check `tsconfig.json` for
+  `strict: true` — Next.js's auto-setup has overwritten this to
+  `false` before; it must match the strict-mode rule in this file
 
 ## What to do when asked to add a feature
 1. Check if it touches auth or the LLM API — if so, confirm it's implemented
