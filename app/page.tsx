@@ -1,4 +1,5 @@
 import { SettingsForm } from '@/components/SettingsForm';
+import { SettingsForm as SettingsFormV0 } from '@/components/SettingsForm-v0';
 
 export default function HomePage() {
   return (
@@ -14,7 +15,15 @@ export default function HomePage() {
           </p>
         </header>
 
-        <SettingsForm />
+        <section>
+          <h2 className="mb-4 text-xl font-semibold">Round 2 — Claude Code (precise prompt)</h2>
+          <SettingsForm />
+        </section>
+
+        <section>
+          <h2 className="mb-4 text-xl font-semibold">Round 3 — v0</h2>
+          <SettingsFormV0 />
+        </section>
       </div>
     </main>
   );
